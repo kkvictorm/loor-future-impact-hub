@@ -10,6 +10,10 @@ import Home from "./pages/Home";
 import QuemSomos from "./pages/QuemSomos";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
+import Solucoes from "./pages/Solucoes";
+import ParaQuem from "./pages/ParaQuem";
+import Diferenciais from "./pages/Diferenciais";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -26,12 +30,12 @@ const App = () => (
               <Route path="/" element={<Home />} />
               <Route path="/quem-somos" element={<QuemSomos />} />
               <Route path="/contato" element={<Contato />} />
+              <Route path="/solucoes" element={<Solucoes />} />
+              <Route path="/para-quem" element={<ParaQuem />} />
+              <Route path="/diferenciais" element={<Diferenciais />} />
+              <Route path="/blog" element={<Blog />} />
+              
               {/* Placeholder routes for future implementation */}
-              <Route path="/solucoes" element={<NotFound />} />
-              <Route path="/para-quem" element={<NotFound />} />
-              <Route path="/diferenciais" element={<NotFound />} />
-              <Route path="/blog" element={<NotFound />} />
-              {/* Nested routes for solutions */}
               <Route path="/solucoes/:solutionSlug" element={<NotFound />} />
               {/* Nested routes for "para quem" */}
               <Route path="/para-quem/:targetSlug" element={<NotFound />} />
