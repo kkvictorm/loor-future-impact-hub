@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,8 +16,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 211 87% 15%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +92,68 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+}
+
+@layer components {
+  .navbar-item {
+    @apply relative px-3 py-2 text-sm font-medium hover:text-loor-green transition-colors;
+  }
+  
+  .navbar-item::after {
+    @apply content-[""] absolute w-full scale-x-0 h-0.5 bg-loor-green left-0 bottom-0 origin-bottom-right transition-transform duration-300;
+  }
+  
+  .navbar-item:hover::after {
+    @apply scale-x-100 origin-bottom-left;
+  }
+
+  .navbar-item.active {
+    @apply text-loor-green;
+  }
+
+  .navbar-item.active::after {
+    @apply scale-x-100;
+  }
+
+  .fade-in-section {
+    @apply opacity-0 translate-y-4 transition-all duration-700 ease-out;
+  }
+
+  .fade-in-section.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .cta-primary {
+    @apply bg-loor-green text-white font-medium px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2;
+  }
+
+  .cta-secondary {
+    @apply bg-loor-blue text-white font-medium px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2;
+  }
+
+  .cta-outline {
+    @apply border-2 border-loor-blue text-loor-blue font-medium px-6 py-[0.625rem] rounded-md hover:bg-loor-blue hover:text-white transition-all duration-300 inline-flex items-center gap-2;
   }
 }
