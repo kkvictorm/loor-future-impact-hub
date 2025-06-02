@@ -146,14 +146,14 @@
   }
 
   .cta-primary {
-    @apply bg-loor-blue text-white font-medium px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2;
+    @apply bg-loor-blue text-white font-semibold px-8 py-4 rounded-lg hover:bg-loor-blue/90 hover:scale-105 transition-all duration-300 inline-flex items-center gap-3 shadow-lg;
   }
 
   .cta-secondary {
-    @apply bg-loor-blue text-white font-medium px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2;
+    @apply bg-gray-900 text-white font-semibold px-8 py-4 rounded-lg hover:bg-gray-800 hover:scale-105 transition-all duration-300 inline-flex items-center gap-3 shadow-lg;
   }
 
   .cta-outline {
-    @apply border-2 border-loor-blue text-loor-blue font-medium px-6 py-[0.625rem] rounded-md hover:bg-loor-blue hover:text-white transition-all duration-300 inline-flex items-center gap-2;
+    @apply border-2 border-gray-900 text-gray-900 font-semibold px-8 py-4 rounded-lg hover:bg-gray-900 hover:text-white hover:scale-105 transition-all duration-300 inline-flex items-center gap-3;
   }
 }
