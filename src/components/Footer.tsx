@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import Logo from "./Logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1: Logo and About */}
           <div className="space-y-4">
-            <div className="font-heading font-bold text-2xl">LOOR</div>
+            <Logo className="brightness-0 invert" width={140} height={46} />
             <p className="text-gray-300 text-sm">Your future, our present.</p>
             <p className="text-gray-300 text-sm">
               Conectamos inovação e capital para transformar oportunidades em impacto real.
