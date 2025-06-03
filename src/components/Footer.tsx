@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import Logo from "./Logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1: Logo and About */}
           <div className="space-y-4">
-            <div className="font-heading font-bold text-2xl">LOOR</div>
+            <div className="flex items-center">
+              <Logo className="h-8 brightness-0 invert" />
+            </div>
             <p className="text-gray-300 text-sm">Your future, our present.</p>
             <p className="text-gray-300 text-sm">
               Conectamos inovação e capital para transformar oportunidades em impacto real.
@@ -100,7 +103,7 @@ const Footer = () => {
                     href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-loor-green transition-colors"
+                    className="hover:text-loor-primary transition-colors"
                     aria-label="Facebook"
                   >
                     <Facebook size={20} />
@@ -109,7 +112,7 @@ const Footer = () => {
                     href="https://twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-loor-green transition-colors"
+                    className="hover:text-loor-primary transition-colors"
                     aria-label="Twitter"
                   >
                     <Twitter size={20} />
@@ -118,7 +121,7 @@ const Footer = () => {
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-loor-green transition-colors"
+                    className="hover:text-loor-primary transition-colors"
                     aria-label="LinkedIn"
                   >
                     <Linkedin size={20} />
@@ -127,7 +130,7 @@ const Footer = () => {
                     href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-loor-green transition-colors"
+                    className="hover:text-loor-primary transition-colors"
                     aria-label="Instagram"
                   >
                     <Instagram size={20} />

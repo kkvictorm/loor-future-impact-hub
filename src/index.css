@@ -118,11 +118,11 @@
 
 @layer components {
   .navbar-item {
-    @apply relative px-3 py-2 text-sm font-medium hover:text-loor-green transition-colors;
+    @apply relative px-3 py-2 text-sm font-medium hover:text-loor-primary transition-colors;
   }
   
   .navbar-item::after {
-    @apply content-[""] absolute w-full scale-x-0 h-0.5 bg-loor-green left-0 bottom-0 origin-bottom-right transition-transform duration-300;
+    @apply content-[""] absolute w-full scale-x-0 h-0.5 bg-loor-primary left-0 bottom-0 origin-bottom-right transition-transform duration-300;
   }
   
   .navbar-item:hover::after {
@@ -130,7 +130,7 @@
   }
 
   .navbar-item.active {
-    @apply text-loor-green;
+    @apply text-loor-primary;
   }
 
   .navbar-item.active::after {
@@ -146,7 +146,7 @@
   }
 
   .cta-primary {
-    @apply bg-loor-green text-white font-medium px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2;
+    @apply bg-loor-primary text-white font-medium px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2;
   }
 
   .cta-secondary {

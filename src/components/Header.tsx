@@ -2,13 +2,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-
-// Placeholder logo, would be replaced with actual SVG import or image
-const Logo = () => (
-  <div className="flex items-center gap-2">
-    <div className="font-heading font-bold text-2xl text-loor-blue">LOOR</div>
-  </div>
-);
+import Logo from "./Logo";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,9 +54,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <Link to="/" aria-label="LOOR Home">
-            <Logo />
-          </Link>
+          <Logo />
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
@@ -109,8 +101,11 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden lg:block">
+          {/* CTA Buttons - Desktop */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Link to="/login" className="cta-outline">
+              ENTRAR
+            </Link>
             <Link to="/contato" className="cta-primary">
               Fale com um especialista
             </Link>
@@ -136,9 +131,7 @@ const Header = () => {
         }`}
       >
         <div className="flex justify-between items-center p-4 border-b">
-          <Link to="/" aria-label="LOOR Home" onClick={() => setIsOpen(false)}>
-            <Logo />
-          </Link>
+          <Logo linkClassName="block" onClick={() => setIsOpen(false)} />
           <button
             onClick={toggleMenu}
             className="p-2 rounded-md text-gray-500 hover:text-loor-blue focus:outline-none"
@@ -172,7 +165,7 @@ const Header = () => {
                               to={subItem.path}
                               className={({ isActive }) =>
                                 `block py-2 ${
-                                  isActive ? "text-loor-green font-medium" : "text-gray-600"
+                                  isActive ? "text-loor-primary font-medium" : "text-gray-600"
                                 }`
                               }
                               onClick={() => setIsOpen(false)}
@@ -189,7 +182,7 @@ const Header = () => {
                     to={item.path}
                     className={({ isActive }) =>
                       `block py-2 border-b ${
-                        isActive ? "text-loor-green font-medium" : "text-gray-600"
+                        isActive ? "text-loor-primary font-medium" : "text-gray-600"
                       }`
                     }
                     onClick={() => setIsOpen(false)}
@@ -199,7 +192,14 @@ const Header = () => {
                 )}
               </li>
             ))}
-            <li className="pt-4">
+            <li className="pt-4 space-y-3">
+              <Link
+                to="/login"
+                className="cta-outline w-full justify-center"
+                onClick={() => setIsOpen(false)}
+              >
+                ENTRAR
+              </Link>
               <Link
                 to="/contato"
                 className="cta-primary w-full justify-center"

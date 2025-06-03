@@ -15,7 +15,7 @@ interface HeroBannerProps {
 }
 
 const HeroBanner = ({
-  backgroundImage,
+  backgroundImage = "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80",
   title,
   subtitle,
   ctaButtonPrimaryText,
@@ -43,22 +43,11 @@ const HeroBanner = ({
   return (
     <div
       ref={bannerRef}
-      className={`relative bg-loor-blue py-16 md:py-24 lg:py-32 fade-in-section ${
-        backgroundImage ? "bg-cover bg-center" : ""
-      }`}
-      style={backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : {}}
+      className="relative py-16 md:py-24 lg:py-32 fade-in-section bg-cover bg-center bg-no-repeat"
+      style={{ 
+        backgroundImage: `linear-gradient(rgba(7, 42, 200, 0.7), rgba(7, 42, 200, 0.7)), url(${backgroundImage})` 
+      }}
     >
-      {/* Overlay for background images to ensure text readability */}
-      {backgroundImage && (
-        <div className="absolute inset-0 bg-loor-blue bg-opacity-60" aria-hidden="true"></div>
-      )}
-
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute -top-10 -left-10 w-64 h-64 bg-loor-green rounded-full opacity-10 blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-loor-green rounded-full opacity-10 blur-3xl"></div>
-      </div>
-
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className={`flex flex-col space-y-6 max-w-3xl mx-auto ${alignmentClasses[alignment]}`}>
@@ -75,7 +64,7 @@ const HeroBanner = ({
                 </Link>
               )}
               {ctaButtonSecondaryText && (
-                <Link to={ctaButtonSecondaryLink || "#"} className="cta-outline text-white border-white hover:bg-white hover:text-loor-blue hover:scale-105 transition-transform">
+                <Link to={ctaButtonSecondaryLink || "#"} className="cta-outline text-white border-white hover:bg-white hover:text-loor-primary hover:scale-105 transition-transform">
                   {ctaButtonSecondaryText}
                 </Link>
               )}
