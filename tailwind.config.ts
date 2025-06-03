@@ -60,7 +60,7 @@ export default {
 				loor: {
 					blue: '#072AC8',
 					'blue-secondary': '#1E96FC',
-					green: '#072AC8',
+					green: '#34D399',
 					purple: '#8B5CF6',
 					orange: '#F97316',
 					gray: '#F0F2F5',
