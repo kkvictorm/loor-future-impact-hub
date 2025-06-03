@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Briefcase, Users, Building, LineChart, Shield, Award, Zap } from "lucide-react";
@@ -46,7 +45,7 @@ const Home = () => {
         ctaButtonSecondaryLink="/contato"
       />
 
-      {/* What We Do Section */}
+      {/* What We Do Section - Light Theme */}
       <section className="bg-white section-padding">
         <div className="container mx-auto px-4">
           <div className="fade-in-section">
@@ -55,6 +54,7 @@ const Home = () => {
               title="Soluções completas para o ecossistema de inovação"
               subtitle="Desenvolvemos tecnologias e serviços que conectam startups promissoras a investidores estratégicos, sempre com foco em conformidade regulatória e impacto positivo."
               alignment="center"
+              theme="light"
             />
           </div>
 
@@ -65,6 +65,7 @@ const Home = () => {
                 title="Regulação"
                 description="Operamos em total conformidade com a Instrução CVM 88/2022, garantindo segurança jurídica para todas as partes envolvidas."
                 link={{ text: "Saiba mais", url: "/diferenciais" }}
+                theme="light"
               />
             </div>
 
@@ -74,6 +75,7 @@ const Home = () => {
                 title="Tecnologia"
                 description="Nossa plataforma proprietária oferece uma experiência fluida e segura para investidores e startups, com arquitetura modular e escalável."
                 link={{ text: "Saiba mais", url: "/diferenciais" }}
+                theme="light"
               />
             </div>
 
@@ -83,13 +85,14 @@ const Home = () => {
                 title="Impacto"
                 description="Facilitamos o acesso ao capital para startups inovadoras, contribuindo para o desenvolvimento econômico sustentável."
                 link={{ text: "Saiba mais", url: "/diferenciais" }}
+                theme="light"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Solutions */}
+      {/* Featured Solutions - Light Theme */}
       <section className="bg-loor-gray section-padding">
         <div className="container mx-auto px-4">
           <div className="fade-in-section">
@@ -98,6 +101,7 @@ const Home = () => {
               title="Como podemos ajudar seu negócio"
               subtitle="Conheça nossas principais soluções para investidores e empreendedores."
               alignment="center"
+              theme="light"
             />
           </div>
 
@@ -116,6 +120,7 @@ const Home = () => {
                   text: "Conhecer solução",
                   url: "/solucoes/equity-crowdfunding"
                 }}
+                theme="light"
               />
             </div>
 
@@ -133,6 +138,7 @@ const Home = () => {
                   text: "Conhecer solução",
                   url: "/solucoes/qualificacao-startups"
                 }}
+                theme="light"
               />
             </div>
 
@@ -150,6 +156,7 @@ const Home = () => {
                   text: "Conhecer solução",
                   url: "/solucoes/plataforma-white-label"
                 }}
+                theme="light"
               />
             </div>
           </div>
@@ -163,7 +170,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* For Who We Serve */}
+      {/* For Who We Serve - Light Theme */}
       <section className="bg-white section-padding">
         <div className="container mx-auto px-4">
           <div className="fade-in-section">
@@ -172,6 +179,7 @@ const Home = () => {
               title="Soluções sob medida para você"
               subtitle="Oferecemos serviços especializados para diferentes perfis do ecossistema de inovação."
               alignment="center"
+              theme="light"
             />
           </div>
 
@@ -183,6 +191,7 @@ const Home = () => {
                 description="Acesse capital de forma estruturada e conte com nossa expertise para acelerar seu crescimento."
                 link={{ text: "Soluções para Startups", url: "/para-quem/startups" }}
                 className="h-full"
+                theme="light"
               />
             </div>
 
@@ -193,6 +202,7 @@ const Home = () => {
                 description="Diversifique seu portfólio com oportunidades de investimento em startups inovadoras."
                 link={{ text: "Soluções para Investidores", url: "/para-quem/investidores" }}
                 className="h-full"
+                theme="light"
               />
             </div>
 
@@ -203,6 +213,7 @@ const Home = () => {
                 description="Tenha sua própria plataforma de investimentos em startups com nossa solução White Label."
                 link={{ text: "Soluções para Corporates", url: "/para-quem/corporates" }}
                 className="h-full"
+                theme="light"
               />
             </div>
 
@@ -213,13 +224,14 @@ const Home = () => {
                 description="Impulsione o ecossistema de inovação com nossas ferramentas de qualificação e conexão."
                 link={{ text: "Saiba mais", url: "/para-quem/governos-organizacoes" }}
                 className="h-full"
+                theme="light"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Diferenciais Section */}
+      {/* Diferenciais Section - Dark Theme */}
       <section className="bg-loor-blue text-white section-padding">
         <div className="container mx-auto px-4">
           <div className="fade-in-section">
@@ -228,15 +240,16 @@ const Home = () => {
               title="Nossos Diferenciais"
               subtitle="Conheça o que torna o LOOR a plataforma ideal para conectar startups e investidores."
               alignment="center"
+              theme="dark"
             />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             <div className="fade-in-section">
               <div className="bg-white/10 rounded-lg p-6 hover:bg-white/15 transition-colors">
-                <Shield className="text-loor-green h-12 w-12 mb-4" />
-                <h3 className="font-heading font-semibold text-xl mb-3">Conformidade com a CVM</h3>
-                <p className="text-white/80">
+                <Shield className="text-loor-dark-section-icon h-12 w-12 mb-4" />
+                <h3 className="font-heading font-semibold text-xl mb-3 text-loor-dark-section-title">Conformidade com a CVM</h3>
+                <p className="text-loor-dark-section-subtitle">
                   Total aderência à Instrução CVM 88/2022, garantindo segurança jurídica para todos os envolvidos.
                 </p>
               </div>
@@ -244,9 +257,9 @@ const Home = () => {
 
             <div className="fade-in-section">
               <div className="bg-white/10 rounded-lg p-6 hover:bg-white/15 transition-colors">
-                <Award className="text-loor-green h-12 w-12 mb-4" />
-                <h3 className="font-heading font-semibold text-xl mb-3">Tecnologia proprietária</h3>
-                <p className="text-white/80">
+                <Award className="text-loor-dark-section-icon h-12 w-12 mb-4" />
+                <h3 className="font-heading font-semibold text-xl mb-3 text-loor-dark-section-title">Tecnologia proprietária</h3>
+                <p className="text-loor-dark-section-subtitle">
                   Plataforma desenvolvida internamente com arquitetura modular, escalável e segura.
                 </p>
               </div>
@@ -254,9 +267,9 @@ const Home = () => {
 
             <div className="fade-in-section">
               <div className="bg-white/10 rounded-lg p-6 hover:bg-white/15 transition-colors">
-                <LineChart className="text-loor-green h-12 w-12 mb-4" />
-                <h3 className="font-heading font-semibold text-xl mb-3">Atuação como investidor</h3>
-                <p className="text-white/80">
+                <LineChart className="text-loor-dark-section-icon h-12 w-12 mb-4" />
+                <h3 className="font-heading font-semibold text-xl mb-3 text-loor-dark-section-title">Atuação como investidor</h3>
+                <p className="text-loor-dark-section-subtitle">
                   Investimos diretamente nas startups que acreditamos, alinhando interesses com nossos parceiros.
                 </p>
               </div>
@@ -275,7 +288,7 @@ const Home = () => {
       {/* Partnership Section */}
       <PartnershipSection />
 
-      {/* Blog Section */}
+      {/* Blog Section - Light Theme */}
       <section className="bg-white section-padding">
         <div className="container mx-auto px-4">
           <div className="fade-in-section">
@@ -284,6 +297,7 @@ const Home = () => {
               title="Conteúdos Recentes"
               subtitle="Fique por dentro das últimas novidades do ecossistema de inovação e investimentos."
               alignment="center"
+              theme="light"
             />
           </div>
 
@@ -298,6 +312,7 @@ const Home = () => {
                 date="12 Maio 2023"
                 author="Equipe LOOR"
                 postUrl="/blog/como-funciona-equity-crowdfunding"
+                theme="light"
               />
             </div>
 
@@ -310,6 +325,7 @@ const Home = () => {
                 date="05 Maio 2023"
                 author="Equipe LOOR"
                 postUrl="/blog/erros-startups-captacao"
+                theme="light"
               />
             </div>
 
@@ -322,6 +338,7 @@ const Home = () => {
                 date="28 Abril 2023"
                 author="Equipe LOOR"
                 postUrl="/blog/tendencias-investimento-startups"
+                theme="light"
               />
             </div>
           </div>

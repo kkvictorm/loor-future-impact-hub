@@ -64,14 +64,26 @@ export default {
 					orange: '#F97316',
 					gray: '#F0F2F5',
 					'text-gray': '#6B7280',
-					// Cores específicas para diferentes contextos
-					'card-accent': '#072AC8',
-					'link-color': '#072AC8',
-					'section-accent': '#072AC8',
-					'blog-category': '#072AC8',
-					'solution-title': '#0A2240',
-					'solution-benefits': '#16A34A',
-					'footer-links': '#072AC8',
+					// Cores para seções com fundo claro (white mode)
+					'light-section': {
+						'title': '#0A2240',
+						'subtitle': '#6B7280',
+						'overline': '#072AC8',
+						'accent': '#072AC8',
+						'link': '#072AC8',
+						'icon': '#072AC8',
+						'benefits': '#16A34A',
+					},
+					// Cores para seções com fundo escuro (dark mode)
+					'dark-section': {
+						'title': '#FFFFFF',
+						'subtitle': 'rgba(255, 255, 255, 0.9)',
+						'overline': '#FFFFFF',
+						'accent': '#FFFFFF',
+						'link': '#FFFFFF',
+						'icon': '#16A34A',
+						'benefits': '#16A34A',
+					},
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
