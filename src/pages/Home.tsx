@@ -353,15 +353,15 @@ const Home = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="bg-loor-green text-white py-16">
+      <section className="bg-loor-blue text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <div className="fade-in-section max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Vamos transformar o futuro juntos?</h2>
+            <h2 className="text-white text-3xl md:text-4xl font-bold mb-6">Vamos transformar o futuro juntos?</h2>
             <p className="text-white/90 text-lg mb-8">
               Entre em contato conosco e descubra como o LOOR pode impulsionar seu negócio ou suas oportunidades de investimento.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/contato" className="bg-white text-loor-green font-medium px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2">
+              <Link to="/contato" className="bg-white text-loor-blue font-medium px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2">
                 Fale com um especialista
                 <ArrowRight size={18} />
               </Link>
