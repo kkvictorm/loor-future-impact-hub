@@ -46,7 +46,7 @@ const SectionTitle = ({ overline, title, subtitle, alignment = "left" }: Section
       className={`fade-in-section max-w-3xl mb-12 ${alignmentClasses[alignment]}`}
     >
       {overline && (
-        <p className="text-loor-green font-medium mb-2 text-sm uppercase tracking-wider transition-all duration-500 delay-100">
+        <p className="text-loor-section-accent font-medium mb-2 text-sm uppercase tracking-wider transition-all duration-500 delay-100">
           {overline}
         </p>
       )}

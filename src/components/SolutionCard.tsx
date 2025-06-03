@@ -24,14 +24,14 @@ const SolutionCard = ({
     <div
       className={`bg-white rounded-lg shadow-md p-6 flex flex-col transition-all duration-300 hover:shadow-lg ${className}`}
     >
-      <h3 className="font-heading font-semibold text-xl mb-3 text-loor-blue">{solutionName}</h3>
+      <h3 className="font-heading font-semibold text-xl mb-3 text-loor-solution-title">{solutionName}</h3>
       <p className="text-gray-600 mb-4">{briefDescription}</p>
 
       {benefitsList.length > 0 && (
         <ul className="space-y-2 mb-6">
           {benefitsList.map((benefit, index) => (
             <li key={index} className="flex items-start">
-              <CheckCircle className="text-loor-green flex-shrink-0 mr-2 h-5 w-5" />
+              <CheckCircle className="text-loor-solution-benefits flex-shrink-0 mr-2 h-5 w-5" />
               <span className="text-gray-600 text-sm">{benefit}</span>
             </li>
           ))}

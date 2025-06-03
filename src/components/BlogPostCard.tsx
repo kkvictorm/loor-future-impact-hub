@@ -31,11 +31,11 @@ const BlogPostCard = ({
       </Link>
       <div className="p-6">
         <div className="flex justify-between items-center mb-3">
-          <span className="text-sm font-medium text-loor-green">{category}</span>
+          <span className="text-sm font-medium text-loor-blog-category">{category}</span>
           <span className="text-sm text-gray-500">{date}</span>
         </div>
         <Link to={postUrl}>
-          <h3 className="font-heading font-semibold text-lg mb-2 hover:text-loor-green transition-colors">
+          <h3 className="font-heading font-semibold text-lg mb-2 hover:text-loor-link-color transition-colors">
             {title}
           </h3>
         </Link>

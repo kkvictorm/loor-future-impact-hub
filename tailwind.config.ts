@@ -64,6 +64,14 @@ export default {
 					orange: '#F97316',
 					gray: '#F0F2F5',
 					'text-gray': '#6B7280',
+					// Cores específicas para diferentes contextos
+					'card-accent': '#072AC8',
+					'link-color': '#072AC8',
+					'section-accent': '#072AC8',
+					'blog-category': '#072AC8',
+					'solution-title': '#0A2240',
+					'solution-benefits': '#16A34A',
+					'footer-links': '#072AC8',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
