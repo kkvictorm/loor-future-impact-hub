@@ -19,6 +19,10 @@ import PlataformaWhiteLabel from "./pages/PlataformaWhiteLabel";
 import InvestimentoPrivado from "./pages/InvestimentoPrivado";
 import QualificacaoStartups from "./pages/QualificacaoStartups";
 import BackOfficeEstrategico from "./pages/BackOfficeEstrategico";
+import ParaQuemStartups from "./pages/ParaQuemStartups";
+import ParaQuemInvestidores from "./pages/ParaQuemInvestidores";
+import ParaQuemCorporates from "./pages/ParaQuemCorporates";
+import ParaQuemGovernosOrganizacoes from "./pages/ParaQuemGovernosOrganizacoes";
 
 const queryClient = new QueryClient();
 
@@ -48,8 +52,12 @@ const App = () => (
               <Route path="/solucoes/qualificacao-startups" element={<QualificacaoStartups />} />
               <Route path="/solucoes/back-office-estrategico" element={<BackOfficeEstrategico />} />
               
-              {/* Nested routes for "para quem" */}
-              <Route path="/para-quem/:targetSlug" element={<NotFound />} />
+              {/* Target audience specific pages */}
+              <Route path="/para-quem/startups" element={<ParaQuemStartups />} />
+              <Route path="/para-quem/investidores" element={<ParaQuemInvestidores />} />
+              <Route path="/para-quem/corporates" element={<ParaQuemCorporates />} />
+              <Route path="/para-quem/governos-organizacoes" element={<ParaQuemGovernosOrganizacoes />} />
+              
               {/* Legal pages */}
               <Route path="/termos-de-uso" element={<NotFound />} />
               <Route path="/politica-de-privacidade" element={<NotFound />} />
